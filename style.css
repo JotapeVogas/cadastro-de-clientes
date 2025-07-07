@@ -1,0 +1,66 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+    background: linear-gradient(to bottom, #2600ff, #1a008b, #000000);
+    position: relative;
+    color: white;
+}
+
+.particle {
+    position: fixed; /* Usa fixed para fixar posição*/
+    filter: blur(3px);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.397);
+    animation: wave 15s ease-in-out infinite;
+}
+
+@keyframes wave {
+    /* Animação em 4 estágios */
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(50px, 30px) rotate(5deg); }
+    50% { transform: translate(0, 60px) rotate(0deg); }
+    75% { transform: translate(-50px, 30px) rotate(-5deg); }
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.client-card {
+    /* Efeito para deixar translúcido */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.client-card:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* responsividade */
+@media (max-width: 600px) {
+    .client-card {
+        padding: 20px;
+    }
+}
