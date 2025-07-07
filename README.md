@@ -43,6 +43,18 @@ Sistema completo para cadastro de clientes com:
 1. Clone o repositório:
    ```bash
    git clone https://github.com/seu-usuario/cadastro-clientes.git
+2. Execute o programa:
+   ```bash
+   python cadastro_clientes.py
+Preencha o formulário e clique em "Salvar"
+
+Confira os dados na janela de confirmação
+
+Os dados serão:
+
+Armazenados em banco.db (SQLite)
+
+Exportados para clientes.json (somente o primeiro cadastro)
 
 # cadastro-de-clientes
 Aplicativo Python com interface Tkinter para cadastrar clientes (nome, email, telefone, cidade). Armazena dados em SQLite e exporta para JSON. Valida campos obrigatórios, mostra confirmação antes de salvar e suporta acentos. Fácil uso, sem dependências externas.
